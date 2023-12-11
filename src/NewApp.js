@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import Navbar3 from "./componnt_News/Navbar3";
 import NewsItem from "./componnt_News/NewsItem";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 function NewApp() {
   const pageSize = 6;
   const apiKey = process.env.REACT_APP_NEWS_API;
