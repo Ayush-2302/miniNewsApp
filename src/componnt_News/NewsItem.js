@@ -15,7 +15,7 @@ function NewsItem(props) {
   };
   const updateNews = async () => {
     props.setProgress(10);
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=a7b8a47cc7da47aab2c3fd6efc1905c9&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setSpinner(true);
     let data = await fetch(url);
     props.setProgress(30);
@@ -35,7 +35,7 @@ function NewsItem(props) {
   const fetchMore = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${
       props.country
-    }&category=${props.category}&apiKey=a7b8a47cc7da47aab2c3fd6efc1905c9&page=${
+    }&category=${props.category}&apiKey=${props.apiKey}&page=${
       page + 1
     }&pageSize=${props.pageSize}`;
     setPage(page + 1);

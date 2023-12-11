@@ -4,7 +4,7 @@ import NewsItem from "./componnt_News/NewsItem";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function NewApp() {
   const pageSize = 6;
-  const apiKey = process.env.REACT_APP_NEWS_API;
+  const apiKey = "a7b8a47cc7da47aab2c3fd6efc1905c9";
   const [progress, setProgress] = useState(0);
   return (
     <>
