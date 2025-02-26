@@ -1,16 +1,16 @@
 import React,{useState} from "react";
-import Navbar3 from "./componnt_News/Navbar3";
-import NewsItem from "./componnt_News/NewsItem";
+import Navbar from "./components/Navbar";
+import NewsItem from "./components/NewsItem";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function NewApp() {
   const pageSize = 6;
-  const apiKey = "a7b8a47cc7da47aab2c3fd6efc1905c9";
-  const [progress, setProgress] = useState(0);
+  const apiKey = process.env.REACT_APP_NEWS_API;
+  console.log(apiKey);  const [progress, setProgress] = useState(0);
   return (
     <>
 
       <Router>
-        <Navbar3 />
+        <Navbar/>
         <Routes>
           <Route exact path="/" element={
             <NewsItem
@@ -18,7 +18,7 @@ function NewApp() {
               apiKey={apiKey}
               key="general"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="general"
             />}/>
           <Route exact path="/business" element={
@@ -27,7 +27,7 @@ function NewApp() {
               apiKey={apiKey}
               key="business"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="business"
             />}/>
           <Route exact path="/entertainment" element={
@@ -36,7 +36,7 @@ function NewApp() {
               apiKey={apiKey}
               key="entertainment"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="entertainment"
             />}/>
           
@@ -46,7 +46,7 @@ function NewApp() {
               apiKey={apiKey}
               key="general"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="general"
             />}/>
           
@@ -56,7 +56,7 @@ function NewApp() {
               apiKey={apiKey}
               key="health"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="health"
             />}/>
           
@@ -66,7 +66,7 @@ function NewApp() {
               apiKey={apiKey}
               key="science"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="science"
             />}/>
           
@@ -76,7 +76,7 @@ function NewApp() {
               apiKey={apiKey}
               key="sports"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="sports"
             />}/>
         
@@ -86,7 +86,7 @@ function NewApp() {
               apiKey={apiKey}
               key="technology"
               pageSize={pageSize}
-              country="in"
+              country="us"
               category="technology"
             />}/>
         
